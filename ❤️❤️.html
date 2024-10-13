@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Namora Eu Karina?</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfaEADDhHN5dvzhxCsOHIMy_zBtMBC7O1uUbb9akD3083kzolYaLFM4EA&s=10');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            -webkit-appearance: none; /* Adicionado para melhor compatibilidade no iOS */
+            position: relative; /* Adicionado para garantir o posicionamento */
+        }
+
+        button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Namora Eu Karina;-;?</h1>
+        <div class="buttons">
+            <button id="sim">SIM</button>
+            <button id="nao">NAO</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sim').onclick = function() {
+            window.location.href = 'https://youtube.com/shorts/1PVt1n3d21M?si=sIEnVeuzrv8FwpRv';
+        };
+
+        let naoClicks = 0;
+
+        document.getElementById('nao').onclick = function() {
+            naoClicks++;
+
+            if (naoClicks % 2 === 0) {
+                window.location.href = 'https://youtube.com/shorts/ZLo7lJEup30?si=54WPMdad35OYr-OL';
+            }
+
+            const button = document.getElementById('nao');
+            const randomX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+
+            button.style.position = 'absolute';
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        };
+    </script>
+</body>
+</html>
